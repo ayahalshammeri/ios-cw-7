@@ -25,40 +25,52 @@ struct ContentView: View {
             .padding(.vertical,46)
             Group {
                 VStack {
-                    Text("IOS")
+                    Text("iOS")
                         .frame(width: 250, height: 60)
-                        .background(.black)// bonus change it to cyan
+                        .background(.cyan)// bonus change it to cyan
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to iOS
+                        .onTapGesture {
+                            name = "apple"
+                        }
 
-                    Text("Gamedev")
+                    Text("sure iOS")
                         .frame(width: 250, height: 60)
                         .background(.black)// bonus change it to red
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to Gamedev
-
-                    Text("Web")
+                        .onTapGesture {
+                            name = "gamedev"
+                        }
+                    Text("definitely iOS")
                         .frame(width: 250, height: 60)
-                        .background(.black)// bonus change it to blue
+                        .background(.blue)// bonus change it to blue
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to web
-                        
-                    Text("Android")
+                        .onTapGesture {
+                            name = "web"
+                        }
+                    Text("not iOS🧢")
                         .frame(width: 250, height: 60)
-                        .background(.black)// bonus change it to green
+                        .background(.green)// bonus change it to green
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to Android
+                        .onTapGesture {
+                            name = "android"
                 }
-            
+                }
             }
             .font(.title)
             .foregroundColor(.white)
         }
     }
 }
-
+            
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
+    
+
